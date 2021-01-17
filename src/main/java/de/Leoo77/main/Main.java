@@ -3,16 +3,16 @@ package de.Leoo77.main;
 import listeners.MessagesListener;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
-import utils.Privates;
+import config.BotProperties;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 //        FallbackLoggerConfiguration.setTrace(true);
 //        FallbackLoggerConfiguration.setDebug(true);
 
-        DiscordApi api = new DiscordApiBuilder().setToken(Privates.Token).login().join();
+        DiscordApi api = new DiscordApiBuilder().setToken(BotProperties.getInstance().getToken()).login().join();
 
         api.addListener(new MessagesListener());
 

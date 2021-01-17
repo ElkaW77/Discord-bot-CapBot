@@ -4,5 +4,4 @@
 /build/classes/java/main/
 /.idea/
 
-/src/main/java/utils/Privates.java
-/src/main/java/utils/
+/.env.properties
