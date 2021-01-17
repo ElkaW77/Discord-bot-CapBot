@@ -18,7 +18,7 @@ public class BotProperties {
         this.token = prop.getProperty("KEY_TOKEN");
     }
 
-    public static BotProperties getInstance() throws Exception {
+    public static BotProperties getInstance() {
         if(INSTANCE == null) {
             INSTANCE = new BotProperties();
         }

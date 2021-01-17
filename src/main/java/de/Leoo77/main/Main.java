@@ -7,18 +7,16 @@ import config.BotProperties;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
 //        FallbackLoggerConfiguration.setTrace(true);
 //        FallbackLoggerConfiguration.setDebug(true);
 
         DiscordApi api = new DiscordApiBuilder().setToken(BotProperties.getInstance().getToken()).login().join();
-
         api.addListener(new MessagesListener());
 
         System.out.println("Invite the Bot using following Link " + api.createBotInvite());
-
-        api.updateActivity("!cap - BOY THATS CAP");
+        api.updateActivity("BOY THATS CAP");
 
     }
 
