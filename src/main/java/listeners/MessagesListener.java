@@ -9,10 +9,17 @@ public class MessagesListener implements MessageCreateListener {
     public void onMessageCreate(MessageCreateEvent event) {
         if(event.getMessageAuthor().isBotUser()) return;
 
-        if(event.getMessageContent().contains("cap")) event.getChannel().sendMessage(":billed_cap:");
+        if(event.getMessageContent().contains("no cap")) {
+            event.getChannel().sendMessage(":no_entry_sign: :billed_cap:");
+            event.getMessage().delete();
+        } else if(event.getMessageContent().contains("cap")) {
+            event.getChannel().sendMessage(":billed_cap:");
+        }
 
-        //Erics ID: 188287832715034625
-        //Auf Erics Nachrichten wird mit Cap reagiert
+
+
+        //Exchange the ID with Id of your choice
+        //react to message with Cap Emoji
         if(Long.toString(event.getMessageAuthor().getId()).equals("188287832715034625")) event.getMessage().addReaction("\uD83E\uDDE2");
 
     }
