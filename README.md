@@ -1,7 +1,7 @@
 # CapBot
 
 ### What does the Bot do?
-* posts Cap Emoji in Chat, a text contains "Cap"
+* posts Cap Emoji `(🧢)` in Chat, a text contains "Cap"
 * responds to specific Id with Cap Emoji
 
 
